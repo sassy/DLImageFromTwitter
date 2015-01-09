@@ -6,7 +6,7 @@ Download Image From Twitter.
 # Usage
 
 * `dl-image-twitter <twitter_id>`
-* Download from twitter id.
+* Download by twitter id.
 * prepare `key.json` file required to authenticate your account.
 
 # key.json format
