@@ -1,10 +1,17 @@
 {
-  "name": "getImageForTwitter",
-  "version": "0.0.0",
-  "description": "get image for twitter.",
+  "name": "dl-image-twitter",
+  "version": "0.0.1",
+  "description": "download images from twitter.",
+  "bin" : {
+    "dl-image-twitter" : "bin/dl-image-twitter"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/sassy/DLImageFromTwitter"
   },
   "author": "Satoshi Watanabe",
   "license": "MIT",
