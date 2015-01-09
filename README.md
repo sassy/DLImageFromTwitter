@@ -1,7 +1,7 @@
 DLImageFromTwitter
 ===================
 
-Download Image From Twitter.
+This package allows you to download images by twitter id.
 
 # Usage
 
