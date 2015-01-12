@@ -7,7 +7,7 @@ var twitter = require('twitter');
 var fs = require('fs');
 
 function download(urlStr) {
-    var dirname = "image"
+    var dirname = "image";
     var url = require('url');
     var http = require("http");
     var filename = url.parse(urlStr).pathname.split('/')[2];
@@ -52,7 +52,7 @@ module.exports.exec = function(argv) {
             }
         });
     });
-}
+};
 
 
 
