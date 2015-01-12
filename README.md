@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sassy/DLImageFromTwitter.svg?branch=master)](https://travis-ci.org/sassy/DLImageFromTwitter)
+
 DLImageFromTwitter
 ===================
 
