@@ -1,7 +1,10 @@
+
 [![Build Status](https://travis-ci.org/sassy/DLImageFromTwitter.svg?branch=master)](https://travis-ci.org/sassy/DLImageFromTwitter)
 
 DLImageFromTwitter
 ===================
+
+[![NPM](https://nodei.co/npm/dl-image-twitter.png)](https://nodei.co/npm/dl-image-twitter/)
 
 This package allows you to download images by twitter id.
 
