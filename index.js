@@ -5,9 +5,9 @@
 var util = require('util');
 var twitter = require('twitter');
 var fs = require('fs');
+var yargs = require('yargs');
 
-function download(urlStr) {
-    var dirname = "image";
+function download(urlStr, dirname) {
     var url = require('url');
     var http = require("http");
     var filename = url.parse(urlStr).pathname.split('/')[2];
@@ -24,17 +24,20 @@ function download(urlStr) {
     });
 }
 
-module.exports.exec = function(argv) {
-    if (argv.length < 3) {
+module.exports.exec = function() {
+    var argv = yargs.argv;
+    if (argv._.length < 1) {
         console.log("missing argument.");
         return;
     }
 
-    var twitter_id = argv[2];
+    var twitter_id = argv._[0];
     if (!fs.existsSync("./key.json")) {
         console.log("you should provide key.json");
         return;
     }
+
+    var dirname = argv.d ? argv.d : "image";
     var json = fs.readFileSync("./key.json", "utf-8");
 
     var twit = new twitter(JSON.parse(json));
@@ -46,7 +49,7 @@ module.exports.exec = function(argv) {
                 var medias = data.extended_entities.media;
                 medias.forEach(function(media) {
                     if (media.type === "photo") {
-                        download(media.media_url);
+                        download(media.media_url, dirname);
                     }
                 });
             }

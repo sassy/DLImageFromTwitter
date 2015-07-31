@@ -14,6 +14,13 @@ This package allows you to download images by twitter id.
 * Download by twitter id.
 * prepare `key.json` file required to authenticate your account.
 
+## Options
+
+```
+  -d <directory_name>  : set direcorry saveing image (default is "image")
+  
+```
+
 # key.json format
 
 ```
@@ -24,6 +31,3 @@ This package allows you to download images by twitter id.
     "access_token_secret" : "ACCESS_TOKEN_SECRET"
 }
 ```
-
-
-

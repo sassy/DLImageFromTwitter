@@ -16,7 +16,8 @@
   "author": "Satoshi Watanabe",
   "license": "MIT",
   "dependencies": {
-    "twitter": "^0.2.13"
+    "twitter": "^0.2.13",
+    "yargs": "^3.16.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
