@@ -18,7 +18,8 @@ This package allows you to download images by twitter id.
 
 ```
   -d <directory_name>  : set direcorry saveing image (default is "image")
-  
+  -k <key.json path>  : set file path of key.json (default is "./key.json")
+
 ```
 
 # key.json format

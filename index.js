@@ -32,16 +32,16 @@ module.exports.exec = function() {
     }
 
     var twitter_id = argv._[0];
-    if (!fs.existsSync("./key.json")) {
+
+    var key_path = argv.k ? argv.k : "./key.json";
+    if (!fs.existsSync(key_path)) {
         console.log("you should provide key.json");
         return;
     }
-
-    var dirname = argv.d ? argv.d : "image";
-    var json = fs.readFileSync("./key.json", "utf-8");
-
+    var json = fs.readFileSync(key_path, "utf-8");
     var twit = new twitter(JSON.parse(json));
 
+    var dirname = argv.d ? argv.d : "image";
 
     twit.get('/statuses/user_timeline.json', {screen_name: twitter_id , include_rts : false , count : 200 }, function(datas) {
         datas.forEach(function(data) {
