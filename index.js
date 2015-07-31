@@ -12,12 +12,12 @@ function download(urlStr) {
     var http = require("http");
     var filename = url.parse(urlStr).pathname.split('/')[2];
     try {
-	fs.statSync(dirname);
+        fs.statSync(dirname);
     } catch(e) {
-	fs.mkdirSync(dirname, 0777);
+        fs.mkdirSync(dirname, 0777);
     }
     http.get(urlStr, function(res) {
-	console.log("save " + urlStr + " ....");
+        console.log("save " + urlStr + " ....");
         res.pipe(fs.createWriteStream(dirname + "/" + filename));
     }).on('error', function(e) {
         console.log(e);
@@ -53,11 +53,3 @@ module.exports.exec = function(argv) {
         });
     });
 };
-
-
-
-
-    
-
-
-
