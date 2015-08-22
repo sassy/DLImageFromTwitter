@@ -2,7 +2,6 @@
  *  Copyright (c) 2014-2015 Satoshi Watanabe
  */
 
-var util = require('util');
 var twitter = require('twitter');
 var fs = require('fs');
 var yargs = require('yargs');
