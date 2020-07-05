@@ -1,6 +1,6 @@
 {
   "name": "dl-image-twitter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "download images from twitter.",
   "bin": {
     "dl-image-twitter": "bin/dl-image-twitter"
