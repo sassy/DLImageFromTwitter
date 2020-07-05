@@ -20,8 +20,6 @@
     "yargs": "^15.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.4.0",
-    "grunt": "0.4.5",
-    "grunt-contrib-jshint": "0.12.0"
+    "eslint": "^7.4.0"
   }
 }
