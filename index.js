@@ -42,11 +42,11 @@ module.exports.exec = function() {
 
     const dirname = argv.d ? argv.d : "image";
 
-    twit.get('/statuses/user_timeline.json', {screen_name: twitter_id , include_rts : false , count : 200 }, function(datas) {
-        datas.forEach(function(data) {
+    twit.get('/statuses/user_timeline', {screen_name: twitter_id , include_rts : false , count : 200 }, function(error, tweets, response) {
+        tweets.forEach((data) => {
             if (data.extended_entities && data.extended_entities.media) {
                 const medias = data.extended_entities.media;
-                medias.forEach(function(media) {
+                medias.forEach((media) => {
                     if (media.type === "photo") {
                         download(media.media_url, dirname);
                     }
