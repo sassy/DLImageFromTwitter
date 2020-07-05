@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "twitter": "^0.2.13",
-    "yargs": "^3.16.1"
+    "yargs": "^15.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
