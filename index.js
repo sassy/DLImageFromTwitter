@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2014-2015 Satoshi Watanabe
+ *  Copyright (c) 2014-2020 Satoshi Watanabe
  */
 
 var twitter = require('twitter');
@@ -13,7 +13,7 @@ function download(urlStr, dirname) {
     try {
         fs.statSync(dirname);
     } catch(e) {
-        fs.mkdirSync(dirname, 0777);
+        fs.mkdirSync(dirname);
     }
     http.get(urlStr, function(res) {
         console.log("save " + urlStr + " ....");
