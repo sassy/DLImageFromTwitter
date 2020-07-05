@@ -42,7 +42,11 @@ module.exports.exec = function() {
 
     const dirname = argv.d ? argv.d : "image";
 
-    twit.get('/statuses/user_timeline', {screen_name: twitter_id , include_rts : false , count : 200 }, function(error, tweets, response) {
+    twit.get('/statuses/user_timeline', {screen_name: twitter_id , include_rts : false , count : 200 }, function(error, tweets) {
+        if (error) {
+            console.error(error);
+            return
+        }
         tweets.forEach((data) => {
             if (data.extended_entities && data.extended_entities.media) {
                 const medias = data.extended_entities.media;
